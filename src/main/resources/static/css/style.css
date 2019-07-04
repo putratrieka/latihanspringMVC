@@ -1,0 +1,8 @@
+@charset "ISO-8859-1";
+body{
+	background: gray;
+}
+table{
+	width: 50%;
+	border: 1px solid black;
+}
