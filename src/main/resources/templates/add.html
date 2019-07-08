@@ -5,9 +5,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="#" method="post" th:action="@{/product/save}" th:object="${product}">
+	<form action="#" method="post" th:action="@{/brand/save}" th:object="${brand}">
+		<input type="hidden" th:fiels="*{id}">
 	  <label>Brand Id :</label>
-	  <br><input type="text" th:field="*{brandId}" /></br>
+	  <br><input type="text" th:field="*{brandId}" placeholder="[default]" readonly="readonly" style="color: graytext;"/></br>
 	 <label>Name :</label>
 	  <br><input type="text" th:field="*{name}" /></br>
 	  <label>Price :</label>

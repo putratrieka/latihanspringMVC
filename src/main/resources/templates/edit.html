@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/formStyle.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="form-wrapper">
+			<form class="form-class" action="#" method="post" th:action="@{/brand/save}" th:object="${brand}" >
+				<span class="form-title">Edit Brand</span>
+			
+				<div class="wrap-input" data-validate="Name is required">
+					<br><input class="input-class" type="text" th:placeholder="*{id}" th:field="*{id}" readonly="readonly" style="color: graytext;" /></br>
+					<span class="focus-input100-1"></span>
+					<span class="focus-input100-2"></span>
+				</div>
+				
+				<div class="wrap-input" data-validate="Name is required">
+				 	 <br><input class="input-class" type="text" th:placeholder="*{name}" th:field="*{name}" style="color: graytext;" /></br>
+					<span class="focus-input100-1"></span>
+					<span class="focus-input100-2"></span>
+				</div>
+				
+				<div class="wrap-input" data-validate="Name is required">
+				  <br><input class="input-class" type="text" th:placeholder="*{productType}" th:field="*{productType}" style="color: graytext;" /></br>
+					<span class="focus-input100-1"></span>
+					<span class="focus-input100-2"></span>
+				</div>
+				
+				<div class="container-contact100-form-btn">
+					<button type="submit" value="Save" class="btn btn-success add-new" style="float: left; overflow: hidden;"><i class="fa fa-plus"></i> Save</button>
+					<a th:href="@{redirect:/brand}"><button class="btn btn-outline-danger" style="float: right"> Cancel</button></a>
+				</div>
+				<div class="container-contact100-cancel-btn">
+					
+				</div>
+			</form> 
+		</div>
+	</div>
+</body>
+</html>
